@@ -58,7 +58,13 @@ footer {height: 50vh}
 
 .demo-wrapper {
   overflow-x: hidden;
+  margin-top: -51rem;
+  background-image: url(https://cdn.leonardo.ai/users/22588896-d697-44e0-9df2-adca844d7364/generations/e8b13280-f23f-4eeb-bc6c-88016444489c/PhotoReal_happy_doctor_in_his_30s_holding_some_pills_and_a_pai_0.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100vh; /* Set width to 100% and height to 100vh */
 }
+
+
 
 .wrapper {
   display: flex;
