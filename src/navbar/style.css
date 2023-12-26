@@ -1,0 +1,143 @@
+body {
+	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	margin: 0;
+	overflow: hidden;
+	width: 100%;
+	font-family: sans-serif;
+	background: white;
+  }
+  
+  #wrapper {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .navbar-toggle {
+	-webkit-tap-highlight-color: transparent;
+	transition: transform 400ms;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+	position: fixed;
+	z-index: 20;
+	top: 1rem;
+	right: 1rem;
+	background: transparent;
+	border: none;
+	outline: none;
+	padding: 0;
+  }
+  
+  .navbar-toggle .line {
+	fill: none;
+	transition-delay: 400ms, 0;
+	transition-property: stroke, stroke-dasharray, stroke-dashoffset;
+	transition-timing-function: ease;
+	transition-duration: 400ms;
+	stroke: #000;
+	stroke-width: 5.5;
+	stroke-linecap: round;
+  }
+  
+  .navbar-toggle .line.top {
+	stroke-dasharray: 40 139;
+  }
+  
+  .navbar-toggle .line.bottom {
+	stroke-dasharray: 20 180;
+	stroke-dashoffset: -20px;
+  }
+  
+  .navbar-toggle.active {
+	transform: rotate(45deg);
+  }
+  
+  .navbar-toggle.active .line.top {
+	stroke-dashoffset: -98px;
+  }
+  
+  .navbar-toggle.active .line.bottom {
+	stroke-dashoffset: -138px;
+  }
+  
+  .navbar-toggle:not(.active):hover .line.bottom {
+	stroke-dasharray: 40 180;
+	stroke-dashoffset: 0px;
+  }
+  
+  .navbar {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	display: none;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .navbar ul {
+	width: 100%;
+	max-width: 400px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  .navbar li {
+	opacity: 0;
+  }
+  
+  .navbar li a {
+	color: white;
+	text-decoration: none;
+	font-size: 25px;
+	display: block;
+	text-align: left;
+	padding: 20px 0;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all ease 500ms;
+	position: relative;
+  }
+  
+  .navbar li a:before {
+	content: attr(data-text);
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 70px;
+	opacity: 0;
+	transition: opacity ease 500ms;
+  }
+  
+  .navbar li a:hover {
+	letter-spacing: 3px;
+  }
+  
+  .navbar li a:hover:before {
+	opacity: .2;
+  }
+  
+  #bg-circle {
+	transform: scale(0);
+	width: 80px;
+	height: 80px;
+	background: #4E6EE2;
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	border-radius: 50%;
+	z-index: 1;
+  }
+  
